@@ -6,6 +6,7 @@ pip install -r requirements.txt
 ./test.sh
 ```
 
+### Notes:
 * I have started implementing the solution right from the Part 2, skipping Part 1. In this way I got much better understanding of the final purpose of the code required for Part 1 and better view on which design decisions are better suited for solving the task.
 * To integrate `parsing.py` into production codebase I've decided to cover most of the code with tests with code coverage report.
 * I changed `parse_dicom_file` function from `parsing.py` to return `np.array` instead of `dict` as i found it is more convenient.

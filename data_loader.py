@@ -69,7 +69,7 @@ def _find_pairs(path, ids):
     :return: list of dicts with paths to DICOM and contourfile pair
     """
 
-    images_folder = os.path.join(path, 'DICOMs', ids['patient_id'])
+    images_folder = os.path.join(path, 'dicoms', ids['patient_id'])
     i_contours_folder = os.path.join(path, 'contourfiles', ids['original_id'], 'i-contours')
     images = os.listdir(images_folder)
 

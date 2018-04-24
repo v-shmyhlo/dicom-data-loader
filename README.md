@@ -18,11 +18,8 @@ pip install -r requirements.txt
 * Another thing I noted is `try/except` statement in `parse_dicom_file` in `parsing.py`, I usually would not ignore such errors as it might lead to not always clear behavior when `None` is returned from a function, but decided to leave it as it is as it might be the correct design decision for some cases. 
 
 ### Phase 2:
-* To meet the requirements of providing o-contours I modified `DataLoader` to return 3-element tuple with image, i-contour and o-contour. This change breaks the interface of `DataLoader` which might not be suitable for production deployment, to alleviate this one can extend the interface with new methods designed for handling new requirements. A better solution would be to return `dict` instead of tuple which can be extended with any additional data without breaking the interface. To make `DataLoader` suitable for different purposes, it is now can be configured to return only the required data: 
+* To meet the requirements of providing o-contours I modified `DataLoader` to return 3-element tuple with image, i-contour, and o-contour. This change breaks the interface of `DataLoader` which might not be suitable for production deployment, to alleviate this one can extend the interface with new methods designed for handling new requirements. A better solution would be to return `dict` instead of tuple which can be extended with any additional data without breaking the interface. To make `DataLoader` suitable for different purposes, it is now can be configured to return only the required data: 
 ```python
 data_loader = DataLoader(..., include_i_contours=False, include_o_contours=True)
 ```
-* For description of solving the segmentation problem please see [segmentation.ipynb](segmentation.ipynb)
-
-* overfit to train set
-* check grammarly
+* For the description of solving the segmentation problem please see [segmentation.ipynb](segmentation.ipynb)

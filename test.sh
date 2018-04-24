@@ -1,1 +1,1 @@
-pytest --cov . --cov-config .coveragerc
+pytest -sv --cov . --cov-config .coveragerc

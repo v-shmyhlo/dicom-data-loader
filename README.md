@@ -1,4 +1,7 @@
-# DICOM Data Loader
+# DICOM Heart Segmentation
+
+## tl;dr
+see [segmentation.ipynb](./segmentation.ipynb)
 
 ### To run tests:
 ```bash
